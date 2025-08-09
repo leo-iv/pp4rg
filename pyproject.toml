@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pp4rg"
+version = "1.0.0"
+description = "Path planning techniques for robotic grasping."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+
+authors = [
+  { name = "Leoš Drahotský", email = "drahotskyl@gmail.com" }
+]
+
+dependencies = [
+  "pybind11",
+  "pillow",
+  "numpy",
+  "torch",
+  "torchsummary",
+  "burg_toolkit @ git+https://github.com/mrudorfer/burg-toolkit@dev"
+]
+
+[tool.setuptools.packages.find]
+include = ["pp4rg"]
